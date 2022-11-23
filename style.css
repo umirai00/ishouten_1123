@@ -24,6 +24,14 @@ body {
     margin: 0;
 }
 
+video {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #060606;
+}
 
 header {
     width: 100%;
@@ -51,7 +59,7 @@ header {
     align-items: flex-end;
     list-style: none;
     width: 66vw;
-    margin-right: 3vw;
+    margin-right: 2vw;
     justify-content: space-between;
 }
 
@@ -62,7 +70,7 @@ header {
 }
 
 .snsNav li {
-    padding: 0 1vw;
+    padding: 0 10px;
 }
 
 .navlist li {
@@ -88,19 +96,28 @@ svg {
     transition: .2s;
 }
 
-#twitter:hover {
+#twitter {
     fill: #00acee;
-    scale: 1.3;
+}
+
+#twitter:hover {
+    scale: 1.2;
+}
+
+#note {
+    fill: #41c9b4;
 }
 
 #note:hover {
-    fill: #41c9b4;
-    scale: 1.3;
+    scale: 1.2;
+}
+
+#instagram {
+    fill: #e1306c;
 }
 
 #instagram:hover {
-    fill: #e1306c;
-    scale: 1.3;
+    scale: 1.2;
 }
 
 .upper {
@@ -132,7 +149,7 @@ h3 {
 }
 
 .pro-card {
-    width: 35vw;
+    width: 45%;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 10px 0 #b8b8b8;
     margin-top: 5vh;
@@ -144,7 +161,7 @@ h3 {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    height: 30vh;
+    /* height: 30vh; */
 }
 
 .pro-pic img {
@@ -349,12 +366,13 @@ footer div {
         top: 10px;
         right: 10px;
         display: flex;
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
         justify-content: center;
         align-items: center;
         z-index: 100;
         background-color: #ff0b0d;
+        /* opacity: .5; */
     }
     
     .menu-btn span,
@@ -371,21 +389,26 @@ footer div {
     
     .menu-btn span:before {
         bottom: 8px;
+        transition: .2s;
     }
     
     .menu-btn span:after {
         top: 8px;
+        transition: .2s;
     }
     
     #menu-btn-check:checked ~ .menu-btn span {
         background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+        transition: .2s;
     }
     #menu-btn-check:checked ~ .menu-btn span::before {
         bottom: 0;
+        transition: .2s;
         transform: rotate(45deg);
     }
     #menu-btn-check:checked ~ .menu-btn span::after {
         top: 0;
+        transition: .2s;
         transform: rotate(-45deg);
     }
     
@@ -393,25 +416,22 @@ footer div {
         display: none;
     }
 
-
-    #menu-btn-check:checked ~ .header1 {
-        left: 60vw;
-    }
     
     header {
         border-bottom: none;
-        /* border-left: 2px solid #ff0b0d; */
+        border-left: 2px solid #ff0b0d;
         /* background: rgba(255, 11, 13, .6); */
         display: block;
         left: 100vw;
         width: 100vw;
         height: 100vh;
-        padding: 20vw 4vw;
+        padding: 20vw 5vw;
         overflow: hidden;
+        transition: .2s;
     }
 
-    svg {
-        /* fill: #f8f8f8; */
+    #menu-btn-check:checked ~ header{
+        left: 58vw;
     }
 
     .navlist {
@@ -425,7 +445,7 @@ footer div {
 
     .jump:hover {
         scale: 1;
-        padding-left: 3vw;
+        /* padding-left: 3vw; */
     }
 
     .navlist li a {
@@ -458,6 +478,8 @@ footer div {
         font-size: .6rem;
     }
 }
+
+
 
 
 
@@ -506,11 +528,11 @@ footer div {
 body {
     animation: scrollseal 0s 5s both;
 }
-
+*/
 body::-webkit-scrollbar {
     display: none;
 }
 
-header {
+header, .menu-btn{
     animation: appear 5s 0s;
-} */
+} 
