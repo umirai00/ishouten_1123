@@ -431,7 +431,7 @@ footer div {
     }
 
     #menu-btn-check:checked ~ header{
-        left: 58vw;
+        left: 40vw;
     }
 
     .navlist {
